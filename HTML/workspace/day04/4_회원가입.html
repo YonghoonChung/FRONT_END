@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/instagram.ico">
+    <title>회원가입</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    < action="register.php">
+        <p>
+            <input type="text" placeholder="아이디"><br>
+            <input type="password" placeholder="비밀번호"><br>
+            <input type="password" placeholder="비밀번호 확인">
+            <input type="button" value = '확인' 
+            onclick = "alert('확인되었습니다')"> <br>
+            <input type="name" placeholder="이름"><br>
+            <input type="tel" placeholder="핸드폰 번호"><br>
+            <input type="email" placeholder="email"><br>
+            <fieldset>
+                <legend>성별</legend>
+                <label > 남자<input type="radio" name = "gender"></label><br>
+                <label>여자<input type="radio" name = "gender"></label>
+            </fieldset>
+           <textarea name="" id="" cols="20" rows="10"></textarea> <br>
+           <input type="number" min = 000000 max = 999999 step = 0> - <input type="number" min = 0000000 max = 4999999 step = 0>
+        </p>
+        <p>
+            <input type="submit" value = "가입완료"> 
+            <input type="reset" value = "초기화">
+        </p>
+    </form>
+</body>
+</html>

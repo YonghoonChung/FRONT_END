@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation - 2</title>
+    <style>
+        /* rotateX */
+        /* rotateY */
+    .box{
+        margin-top: 100px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+        width:80px;
+        height: 80px;
+        background-color: plum;
+        /* animation-name: moving;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite; */
+        /* animation-direction: alternate; */
+        animation: moving 1.5s infinite alternate;
+    }
+    @keyframes moving{
+        0%{
+            transform: perspective(100px) rotateX(0deg)rotateY(0deg);
+            opacity: 1;
+        }
+        50%{
+            transform: perspective(50px) rotateX(-180deg)rotateY(0deg);
+            opacity: 0.5;
+        }
+        100%{
+            transform:perspective(10px) rotateX(-180deg) rotateY(-180deg);
+            opacity:1;
+        }
+
+    }
+    </style>
+</head>
+<body>
+    <h2>animation - 2</h2>
+    <div class="box"></div>
+</body>
+</html>

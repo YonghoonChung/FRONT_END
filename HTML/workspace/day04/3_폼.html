@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+</head>
+<body>
+    <h2>폼</h2>
+    <form action="regist.php">
+        
+        <p>
+            <input type = "text" placeholder = "아이디를 입력하세요">
+        </p>
+        
+        <p>
+            <input type ="password" placeholder = "비밀번호를 입력하세요">
+        </p>
+        
+        <p>
+            <fieldset>
+                <legend>성별</legend>
+                <label> 남자<input type ="radio" name = "gender"checked></label> <br>
+                <label for="w">여자<input type ="radio" name = "gender" id = "w"></label>
+            </fieldset>
+        </p>
+        
+        <p><input type="checkbox"> <input type="checkbox"></p>
+        
+        <p>
+            <input type="file">
+        </p>
+        
+        <p>
+            <input type="button" value= "인사하기" onclick = "alert('안녕하십니까!')">
+        </p>
+        
+        <p><input type="reset" value = "초기화하기"></p>
+        
+        <p>
+            <input type="submit" value = "가입하기"> <button>가입하기</button>
+        </p>
+        
+        <p>
+            <input type="email">
+        </p>
+        
+        <p>
+            <input type="url">
+        </p>
+        
+        <p>
+            <input type="tel">
+        </p>
+        <p>
+            <input type="date">
+        </p>
+
+        <p>
+            <input type="number" min = "0" max= "100" step = "5">
+        </p>
+        <p>
+            <input type="color">
+        </p>
+        <p>
+            <input type="search">
+        </p>
+        <p>
+            <input type="range" min = "1" max = "5">
+        </p>
+        <p>
+            <select name = "lang">
+                <option value = "HTML">HTML</option>
+                <option value = "CSS">CSS</option>
+                
+            </select>
+        </p>
+        <p>
+            <textarea name="" id="" cols="10" rows="5"></textarea>
+        </p>
+        <p>
+            <input type="text" list = "language">
+            <datalist id = "language">
+                <option value="client">HTML</option>
+                <option value="client">CSS</option>
+                <option value="client">Javascript</option>
+                <option value="client">jQuery</option>
+                <option value="client">React</option>
+                <option value="server" label="PHP">PHP</option>
+                <option value="server">node.js</option>
+
+            </datalist>
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition - 1</title>
+    <style>
+        div{
+            width:100px;
+            height: 100px;
+            margin: 30px;
+            border: 1px solid black;
+
+        }
+        #bg-tr{
+            background-color: plum;
+            transition:background-color linear .5s;
+            
+        }
+        #bg-tr:hover{
+            background-color: yellowgreen;
+        }
+        #border-tr{
+            background-color: olive;
+            border: 5px dotted hotpink;
+            transition: all ease 1.5s;
+        }
+        #border-tr:hover{
+            background-color: lavender;
+            border: 5px dashed cornflowerblue;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>transition - 1</h2>
+    <div id="bg-tr"></div>
+    <div id="border-tr"></div> 
+</body>
+</html>

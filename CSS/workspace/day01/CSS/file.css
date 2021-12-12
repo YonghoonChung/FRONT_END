@@ -1,0 +1,17 @@
+/* 파일 전체가 css문법 적용 */
+
+h2{
+    font-size: 50px;
+}
+p{
+    font-size: 20px; /*기본 글자 크기 : 16px*/
+}
+ul{
+    list-style-type: none;
+    color: pink;
+}
+li{
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+}

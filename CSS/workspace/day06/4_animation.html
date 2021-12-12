@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Animation - 1</title>
+    <style>
+        .box{
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 100px;
+            padding: 20px;
+            height: 60px;
+            border:1px solid black;
+            animation-name: moving;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /* animation-direction: reverse; */
+            animation-direction: alternate;
+            /* animation-direction: alternate-reverse; */
+        }
+        @keyframes moving{
+            from{
+                width: 10px;
+                background-color: cornflowerblue;
+                opacity: 0.5;
+                /* padding-left: 0%; */
+
+            }
+            to{
+                width: 400px;
+                background-color: crimson;
+                opacity: 1;
+                /* padding-left: 50%; */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Animation - 1</h2>
+    <div class="box">
+        <h3>CSS Animation</h3>
+    </div>
+</body>
+</html>

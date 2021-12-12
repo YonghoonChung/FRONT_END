@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우선순위</title>
+    <style>
+        #id-style-with-important{background-color: hotpink !important;}
+        div{
+            display: block;
+            padding: 30px;
+            margin: 10px;
+            background-color: white;
+            border: 1px solid black;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        /* id는 100점 */
+        /* #id-style{
+            background-color: blue;
+        } */
+        /* element 1점 */
+        div{
+            background-color: purple; 
+        }
+        /* 클래스는 10점 */
+        .class-style{
+            background-color: red;
+        }
+        .class-style2{
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h2>우선순위</h2>
+    <div style = "background-color: green"; id="id-style-with-important">div 1번(important 적용)</div>
+    <div style = "background-color: green";id-style">div 2번(인라인 스타일 적용 - 1000점)</div>
+    <div id="id-style">div 3번</div>
+    <div class="class-style">div 4번 (클래스 스타일 100점</div>
+    <div>div 5번(마지막에 적용한 스타일)</div>
+    <div id="id-style"class="class-style class-style2" >div 6번 (마지막에 적용한 스타일)</div>
+    <div class="class-style" class="class-style2"id="id-style" >div 7번 (id나 class 속성은 나누어서 적용하면 먼저 적용한 속성의 스타일이 우선)</div>
+
+</body>
+</html>

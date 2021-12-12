@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{font-family: 'twayair';}
+/* #intro{
+    height: 300px;
+    padding: 15px;
+    background-color: yellow;
+} */
+#intro>.content>.text{
+    text-align: left;
+}
