@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>베열-2</title>    
+    <title>배열 - 2</title>
 </head>
 <body>
-    <h2>베열-2</h2>
+    <h2>배열 - 2</h2>
     <script>
-        let arr = ['apple', 'abc1234', '김사과'];
+        let arr = ['apple','abcd1234','김사과'];
         arr.push(10);
         console.log(arr);
 
@@ -19,21 +19,25 @@
         arr.pop();
         console.log(arr);
 
-        let arr1= [10,20,30];
-        let arr2= [20,30,40];
+        let arr1 = [10,20,30];
+        let arr2 = [40,50,60];
+
+        //concat은 기존 배열들의 원본은 그대로 놔둔다. 연결된 새로운 배열을 돌려준다. 2241
         let arr3 = arr1.concat(arr2);
         console.log(arr1);
         console.log(arr2);
         console.log(arr3);
 
-        let str1 = arr3.join("★");
+        let str1 = arr3.join("☆");        //"10☆20☆30☆40☆50☆60"
+        console.log(str1);
 
-        let arr4 = [1000, 27,13,271,50];
+        
+        let arr4 = [1000,27,13,271,50];     //아스키코드로 비교 / 사전순으로 정렬
         arr4.reverse();
         console.log(arr4);
-
+        
         arr4.sort();
         console.log(arr4);
-    </script>
+        </script>
 </body>
 </html>

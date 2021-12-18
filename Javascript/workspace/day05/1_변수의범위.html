@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 범위</title>
+</head>
+<body>
+    <h2>변수의 범위</h2>
+    <script>
+        let num1 = 10;
+
+        function f1(){
+            console.log('f1() 내부에서 출력한 num1',num1);
+            num1 = 20;
+        }
+        f1();
+        console.log('f1() 들어갔다가 나온 후 출력한 num1',num1);
+
+        let num2 = 100;
+
+        function f2(){ // 새로운 선언(지역변수 num2 선언)
+            let num2 = 200;
+            console.log('f2() 내부에서 출력한 num2', num2); 
+        }
+        f2();
+        console.log(num2);
+
+        var num3 = 1000;
+        if(num3 == 1000){
+            num3 = 2000;
+            console.log('if문 내부에서 출력한 num3', num3);
+        }
+        console.log('if문 들어갔다가 나온 후 출력한 num3', num3);
+
+        var num4 = 10000;
+        if(num4 == 10000){
+            var num4 = 20000; // var는 새로운 선언을 하더라도
+            // 지역변수로 선언이 안된다.(함수영역에서는 지역변수로 되긴 함).
+            console.log('if문의 num4', num4);
+        }
+        console.log('num4 : ', num4);
+
+        let num5 = 1000000;
+        if(num5 = 1000000){
+            let num5 = 2000000;
+            console.log(num5);
+        }
+        console.log(num5);
+    </script>
+</body>
+</html>

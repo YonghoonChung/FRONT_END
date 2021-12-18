@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>베열-1</title>    
+    <title>배열 - 1</title>
 </head>
 <body>
-    <h2>베열-1</h2>
+    <h2>배열 - 1</h2>
     <script>
-        let arr = ['apple', 'abc1234', '김사과', 10];
+        // let data = 10;
+        // console.log(data);
+        //            0         1        2     3
+        let arr = ['apple','abcd1234','김사과',10];
         console.log(arr[0]);
         console.log(arr[1]);
         console.log(arr[2]);
         console.log(arr[3]);
-        
+
         arr[5] = '서울시 강남구 역삼동';
         console.log(arr[4]);
 
         console.log(arr.length);
-        console.log(arr);
-        for(let i = 0; i< arr.length;i++){
+        console.log("-----------");
+        // arr.length를 이용하는 이유 -> 유지보수, 가독성
+        for(let i=0;i<arr.length;i++){
             console.log(arr[i]);
         }
     </script>
