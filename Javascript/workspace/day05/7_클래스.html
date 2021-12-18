@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스</title>
+</head>
+<body>
+    <h2>클래스</h2>
+    <script>
+        // 타 언어와 비슷하게 만들기
+        class Car{
+            constructor(brand, color, price) {
+                this.brand = brand;
+                this.color = color;
+                this.price = price;
+            }
+            enginerStart(){
+                console.log(this.brand+" 시동 켜기");
+            }
+            enginerStop(){
+                console.log(this.brand+" 시동 끄기");
+            }
+        }
+        const mycar = new Car('Ferrari', 'Red', 65000);
+        mycar.enginerStart();
+    </script>
+</body>
+</html>

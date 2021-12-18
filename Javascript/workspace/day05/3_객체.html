@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체</title>
+</head>
+<body>
+    <h2>객체</h2>
+    <script>
+        const car = {
+            brand:'Ferrari',
+            color:'Red',
+            price:65000,
+            HP: 1000,
+            zeroback:2.5
+        };
+        // .(하위 연산자)
+        // A.B -> A 안의 B/ A의 b 
+        car.price -= 10000;
+
+        // 전통적인 
+        console.log(car.brand);
+        console.log(car.color);
+        console.log(car.price);
+        console.log(car.HP);
+        console.log(car.zeroback);
+        
+        // 배열처럼 접근 가능 
+        console.log(car['brand']);
+        console.log(car['color']);
+        console.log(car['price']);
+        console.log(car['HP']);
+        console.log(car['zeroback']);
+        
+        for(let key in car){
+            console.log(`이 차의 ${key}는 ${car[key]}입니다`);
+        }
+    </script>
+</body>
+</html>

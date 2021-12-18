@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동물원</title>
+</head>
+<body>
+    <h2>동물원</h2>
+    <script>
+        function Animal(name, gender, species,age){
+            this.name = name;
+            this.gender = gender;
+            this.species = species;
+            this.age = age;
+
+            this.eat = function(){
+                console.log(this.name+" 먹기");
+            }
+            this.sleep = function(){
+                console.log(this.name+" 자기");
+            }
+            this.cry = function(){
+                console.log(this.name+" 울기");
+            }
+        }
+        const dog = new Animal('dog', 'male', 'chitzu',12);
+        const cat = new Animal('cat', 'female', 'stray',1);
+        const panda = new Animal('panda','male', 'chinese',41);
+        
+        
+        console.log(dog.name);
+        console.log(dog.gender);
+        console.log(dog.species);
+        dog.eat();
+        dog.sleep();
+        dog.cry();
+        cat.cry();
+        panda.cry();
+    </script>
+</body>
+</html>
