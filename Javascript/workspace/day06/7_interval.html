@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interval</title>
+</head>
+<body>
+    <h2>interval</h2>
+    <script>
+        let iv = setInterval(()=>{
+            console.log('안녕하세요');
+        },2000);
+
+        function stopIt(){
+            alert('콘솔을 진정시킵니다...');
+            window.clearInterval(iv);
+        }
+    </script>
+    <input type="button" value="콘솔 멈춰 ~~" onclick="stopIt();">
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String 객체</title>
+</head>
+<body>
+    <h2>String 객체</h2>
+    <script>
+        const str1 = "Hello Javascript!";
+
+        console.log(str1.length);
+
+        console.log(str1.indexOf('J')); // 위치를 알려준다
+        console.log(str1.indexOf('Java')); // 문자통째로 찾아준다. 
+        console.log(str1.indexOf('java')); // 없으면 -1
+
+        console.log(str1.indexOf('a')); // 첫번째 'a'를 찾는다
+        console.log(str1.lastIndexOf('a')); // 뒤에서 첫번째 'a'를 찾는다
+
+        console.log(str1[5]);
+        console.log(str1[6]);
+        console.log(str1.charAt(6));
+
+        console.log(str1.includes('Java'));
+        console.log(str1.includes('python'));
+
+        console.log(str1.substring(6)); // 원본을 자르는 것이 아니다
+        console.log(str1.substring(6,10)); //7번쨰 부터 9번쨰 까지 (위치로 자른다)
+
+        console.log(str1.substr(6,4)); // 6번째부터 4자리 앞 (길이로 자른다.)
+
+        const str2 = 'apple/banana/cherry/durian';
+        const fruit = str2.split('/');
+        for(let i = 0; i< fruit.length;i++){
+            console.log(fruit[i]);
+        }
+        console.log('apple/'.split('/')[0]);
+        console.log('apple/'.split('/'));
+
+        console.log(str1.replace("Hello","Bye")); // 원본은 바꾸지 않는다
+        
+        const str3 = '          Javascript';
+        console.log(str3 == "Javascript");
+        console.log(str3.trim() == "Javascript");
+
+    </script>
+</body>
+</html>

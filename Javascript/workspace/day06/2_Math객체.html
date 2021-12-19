@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 객체</title>
+</head>
+<body>
+    <h2>Math 객체</h2>
+    <script>
+        console.log(Math.min());
+        console.log(Math.max());
+        console.log(Math.min(1,10,-10,1100,0));
+        console.log(Math.max(1,10,-10,1100,0));
+        console.log(Math.min(1,10,'-10',1100,0)); // 자동 형변환
+        console.log(Math.min(1,10,'-10','천백',0)); // 비교할수 없는 문자열일때 변환이 안된다.
+        
+        
+        console.log(Math.round(10.48)); // 10
+        console.log(Math.round(10.50000001)); // 11
+        console.log(Math.round(-10.5)); // -10
+
+        console.log(Math.floor(10.999))// 10
+        console.log(Math.floor(-10.1))// -11
+        
+        console.log(Math.ceil(10.01))// 11
+        console.log(Math.ceil(-10.001))// -10
+
+        // 둘째 자리에서 반올림 하는 방법
+        console.log(Math.round(10.48*10)/10);
+
+        // n째 자리에서 반올림을 하려면 
+        // 1. 10의 (n-1)제곱을 곱하기
+        // 2. 반올림하기(round())
+        // 3. 곱했던 만큼 다시 나눠주기
+
+        for(let i = 0; i<5; i++){
+            console.log(`랜덤한 숫자 ${Math.random()}`); // 실수로 나온다.
+        }
+        console.log(Math.floor(Math.random()*100)%45);
+
+
+    </script>
+</body>
+</html>
