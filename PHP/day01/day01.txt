@@ -1,0 +1,70 @@
+이름 : 211009 프론트엔드
+링크 : https://open.kakao.com/o/gHID35Dd
+참여코드 : 1400FE
+
+정다솔 id235761@gmail.com
+----------------------------------------------------------
+PHP
+    서버쪽에서 해석되는 언어
+    웹 서버 프로그램에서 해석되는 스크립트 언어
+    데이터베이스와 연동을 편하게 할 수 있음
+    거의 모든 운영체제에서 개발이 가능
+    속도가 매우 빠름
+    파일 업로드, 메일 전송... 등 기능을 자체적으로 지원
+
+              요청
+    클라이언트 ----> 서버
+              <---- PHP --> PHP해석기 --> HTML
+              응답
+    
+아파치 웹서버 다운로드
+    1. https://www.apachelounge.com/download/
+    2. httpd-2.4.52-win64-VS16.zip 다운로드
+    3. 압축파일 C:\(혹은 다른 드라이브 루트경로)로 가져와서 압축풀기
+    4. 압축 푼 폴더 안의 Apache24 폴더 밖으로 꺼내기
+    5. Apache24\conf\httpd.conf 파일 VSC로 드래그해서 열기
+    6. 218번 줄을 ServerAdmin localhost:80 로 수정
+    7. 251번 줄을 DocumentRoot "D:\1400_FE_JDS\PHP" 로 수정
+    8. 252번 줄을 <Directory "D:\1400_FE_JDS\PHP"> 로 수정
+    9. 윈도우 검색에 시스템 환경 변수 편집 실행
+    10. 환경 변수 버튼 클릭
+    11. 아래쪽에서 Path 변수 찾기, 편집 클릭
+    12. 새로 나오는 애기창에서 새로만들기 클릭
+    13. C:\Apache24\bin 작성 후 확인
+    14. 창 모두 닫고 cmd 관리자 권한으로 실행
+    15. httpd -k install 실행
+
+PHP 다운로드
+    1. https://windows.php.net/download#php-7.4
+    2. VC15 x64 Thread Safe 중 Zip 파일 다운로드
+    3. 받은 알집파일 C:\로 가져와서 압축 풀기
+    4. 압축 풀은 폴더의 이름을 php7로 변경
+    5. 폴더 내부에 php.ini-development 파일의 확장자를 .ini로 변경
+    6. 변경된 php.ini 파일을 VSC로 드래그해서 열기
+    7. 759번 줄을 extension_dir = "C:\php7\ext" 로 수정(extension_dir로 검색)
+    8. 926번 줄을 extension=mysqli 로 수정(extension=mysqli로 검색 후 2번째)
+
+맥북 참고 링크
+	https://meanbymin.tistory.com/69?category=944814
+
+PHP의 기본 문법
+    HTML 문서 내에 <?php 로 시작하고 ?> 끝남
+    PHP 문법을 사용하면 확장자를 .php로 저장
+    C언어, Java처럼 PHP의 명령문의 끝은 세미콜론(;)으로 끝남
+        정말 문장을 끝낸다
+    주석문은 /* */(여러줄 주석), //(한줄 주석) 으로 사용
+
+PHP의 출력문
+    echo(값);
+    echo 값;
+
+    echo로 출력하려는 값 자체가 HTML에 그대로 써진 채로 표현된다.
+    
+    PHP파일                         HTML파일
+    echo(5);                        5
+    echo("\n"); 해석을 하면          5
+    echo(5);                        
+
+PHP의 변수
+    $변수명;
+    $변수명 = 값;
