@@ -1,0 +1,54 @@
+fopen()
+    file() 함수보다 유연한 코드를 작성하기 위한 함수로,
+    모드를 설정해서 여러가지 파일에 대한 처리가 가능하다.
+
+    모드
+        a : append(추가 모드)
+        w : write(덮어쓰기 모드)
+        r : read(읽기 모드)
+
+fgets()
+    fopen() 함수로 open한 파일의 데이터를 읽어옴
+
+fputs()
+    fopen() 함수로 open한 파일에 데이터를 저장함
+
+feof()
+    fopen() 함수로 open한 파일의 데이터가 존재하는지 여부를 확인
+
+fclose()
+    fopen() 함수로 open한 파일을 더이상 사용하지 않는다면 파일을 닫음
+
+DB(DataBase)
+    데이터가 모여있는 저장소
+    데이터들을 통합하여 관리하는 집합체
+
+    DBMS(DataBase Management System)
+        데이터베이스를 관리하는 소프트웨어
+
+    DB-engines
+        https://db-engines.com/en/ranking
+
+    mysql 다운로드
+        https://dev.mysql.com/downloads/mysql/
+    
+    DBMS를 사용하는 이유
+        중복된 데이터를 제거
+        자료를 구조화 시킬 수 있음
+        효율적인 처리
+        다양한 프로그램을 사용하는 사용자들과 데이터 공유
+    
+    SQL(Structured Query Language)
+        관계형 데이터베이스에서 데이터들을 정의, 조작, 제어하기 위해 사용되는 언어
+        대소문자를 구별하지 않음
+        문자열을 저장할 때 ''사용
+        주석은 # 으로 표현
+        한 줄씩 실행
+    
+    데이터 저장 구조
+        테이블  데이터들이 저장되는 공간
+        행      하나의 대상에 대한 데이터(레코드, row, 튜플)
+        열      하나의 속성(컬럼, 필드, 어트리뷰트)
+
+        apple   abcd1234    김사과  10
+        banana  abcd1234    반하나  20
