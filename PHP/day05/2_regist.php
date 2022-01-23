@@ -12,7 +12,7 @@
 <body>
     <h2>회원가입</h2>
     <!-- 데이터 처리를 위해 xxx.php로 보낸다, 유효성 검사 -->
-    <form action="5_regist_ok.php" name="regform" id="regform" method="post" onsubmit='return sendit();' >
+    <form action="2_regist_ok.php" name="regform" id="regform" method="post" onsubmit='return sendit();' >
         <!-- onsubmit -> true/false에 따라 제출/미제출 -->
         <input type="hidden" name="isssn" id="isssn" value="n">
         <p><label>아이디 : <input type="text" name="userid" id="userid" maxlength="20"></label></p>
@@ -20,6 +20,10 @@
         <p><label>비밀번호 확인 : <input type="password" name="userpw_re" id="userpw_re" maxlength="20"></label></p>
         <p><label>이름 : <input type="text" name="name" id="name"></label></p>
         <p><label>휴대폰 번호 : <input type="text" name="hp" id="hp"></label></p>
+        <p>
+            <label>남 <input type="radio" name="usergender" value="남자" checked></label>
+            <label>여 <input type="radio" name="usergender" value="여자"></label>
+        </p>
         <p><label>이메일 : <input type="text" name="email" id="email"></label></p>
         <p>취미 : <label>드라이브<input type="checkbox" name="hobby[]" value="드라이브" ></label>
             <label>영화감상<input type="checkbox" name="hobby[]" value="영화감상"></label>

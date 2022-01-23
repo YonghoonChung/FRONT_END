@@ -1,0 +1,27 @@
+DB 접속 (PHP-DB연동)
+    연결하기 위해서 다리가 필요하다
+    mysqli_connect("IP주소","계정명","비밀번호","DB연동", "포트번호") or die("연결 실패시 메세지");
+        다리 연결하기
+        $conn으로 명령을 보낸다.
+
+    쿼리문을 직접 문자열로 만들어서 DB로 보낸다.
+        mysqli_query()로 DB에 보내고 경우에 따라 결과를 돌려받는다(select)
+
+    1. $conn = mysqli_connect() // 다리짓기
+    2. $sql = "insert into ~~ " // 배송요청
+    3. mysqli_query()           // DB로 보내기
+        ex ) mysqli_query($conn, $sql);
+        3-1. mysqli_fetch_array() //답장받기
+            select를 사용할때만 나온다
+
+    이 순서로 DB를 관리한다.
+SQL문 쿼리 실행
+                   다리      택배
+    mysqli_query(연결객체, SQL문자열);
+
+비밀번호 암호화
+    md5
+        128비트 암호화 해시함수
+        주로 프로그램이나 파이이 원본 그대로인지 확인하는 무결성 검사에 많이 사용
+        안전하지 않은 암호화(권장 x), 단방향
+        기본 암호화
