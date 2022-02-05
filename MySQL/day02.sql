@@ -184,5 +184,8 @@ from tb_profile p
 	full outer join tb_user u on p.useridx = u.useridx
 ;
 
+delete from tb_profile;
+delete from tb_user;
+
 
 
