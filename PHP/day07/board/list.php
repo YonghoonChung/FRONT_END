@@ -2,21 +2,21 @@
     include "../include/dbconn.php";
 
     $sql = "select count(boardidx) total from tb_board";
-    $result = mysqli_query($conn,$sql);
+    $result = mysqli_query($conn, $sql);
     $data = mysqli_fetch_array($result);
 
     $total = $data['total'];
 
-    $pageCount = 10;    //페이지당 보여질 게시글 개수
-    $start = 0;         //게시글의 시작 행 번호
-    $page = 1;          //페이지 번호(지정하지 않는다면 1페이지)
+    $pageCount = 10;    //페이지당 게시글 수
+    $start = 0;         // 게시글의 시작 행 번호
+    $page = 1;          // 페이지 번호(지정하지 않는다면 1페이지)
 
-    // list.php?page=3
+    //list.php?page = 3
     if(isset($_GET['page'])){
         $page = $_GET['page'];          // 3
         $start = ($page-1)*$pageCount;  // (3-1)*10 ==> 20
     }
-    $sql = "select boardidx, boardtitle, userid, boardhit, boardlike, boardregdate
+    $sql = "select boardidx, boardtitle, userid, boardhit, boardlike, boardregidate
     from tb_board order by boardidx desc limit $start, $pageCount";
     $result = mysqli_query($conn,$sql);
 ?>
@@ -42,7 +42,7 @@
         </tr>
         <tr>
             <td>100</td>
-            <td><a href="#">가장 최근 게시글</a>[4]</td>
+            <td><a href="#">가장 최근 게시글</a></td>
             <td>apple</td>
             <td>100</td>
             <td>5</td>

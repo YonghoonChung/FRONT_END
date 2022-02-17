@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,12 @@
     <title>회원가입</title>
     <script src="./js/regist.js"></script>
 </head>
+
 <body>
     <h2>회원가입</h2>
-    <form action="2_regist_ok.php" name="regform" id="regform" method="post" onsubmit="return sendit()">
+    <!-- 데이터 처리를 위해 xxx.php로 보낸다, 유효성 검사 -->
+    <form action="regist_ok.php" name="regform" id="regform" method="post" onsubmit='return sendit();' >
+        <!-- onsubmit -> true/false에 따라 제출/미제출 -->
         <input type="hidden" name="isssn" id="isssn" value="n">
         <p id="result">&nbsp;</p>
         <p>
@@ -18,31 +22,31 @@
         </p>
         <p><label>비밀번호 : <input type="password" name="userpw" id="userpw" maxlength="20"></label></p>
         <p><label>비밀번호 확인 : <input type="password" name="userpw_re" id="userpw_re" maxlength="20"></label></p>
-        <p><label>이름 : <input type="text" name="name" id="username"></label></p>
+        <p><label>이름 : <input type="text" name="name" id="name"></label></p>
         <p><label>휴대폰 번호 : <input type="text" name="hp" id="hp"></label></p>
         <p>
             <label>남 <input type="radio" name="usergender" value="남자" checked></label>
             <label>여 <input type="radio" name="usergender" value="여자"></label>
         </p>
         <p><label>이메일 : <input type="text" name="email" id="email"></label></p>
-        <p>취미
-            <label>드라이브<input type="checkbox" name="hobby[]" value="드라이브"></label>
+        <p>취미 : <label>드라이브<input type="checkbox" name="hobby[]" value="드라이브" ></label>
             <label>영화감상<input type="checkbox" name="hobby[]" value="영화감상"></label>
-            <label>공부<input type="checkbox" name="hobby[]" value="공부"></label> 
-            <label>게임<input type="checkbox" name="hobby[]" value="게임"></label> 
+            <label>공부<input type="checkbox" name="hobby[]" value="공부"></label>
+            <label>게임<input type="checkbox" name="hobby[]" value="게임"></label>
             <label>운동<input type="checkbox" name="hobby[]" value="운동"></label>
             <label>코딩<input type="checkbox" name="hobby[]" value="코딩"></label>
         </p>
         <p>
-            <input type="text" id="sample6_postcode" placeholder="우편번호" name="zipcode" readonly>
-            <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+            <input type="text" id="sample6_postcode" placeholder="우편번호" name='zipcode'readonly>
+            <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
         </p>
         <p>
-            <input type="text" id="sample6_address" placeholder="주소" name="address1" readonly>
-            <input type="text" id="sample6_detailAddress" placeholder="상세주소" name="address2"><br>
-            <input type="text" id="sample6_extraAddress" placeholder="참고항목" name="address3" readonly>
+            <input type="text" id="sample6_address" placeholder="주소" name='address1' readonly>
+            <input type="text" id="sample6_detailAddress" placeholder="상세주소" name='address2'readonly><br>
+            <input type="text" id="sample6_extraAddress" placeholder="참고항목"name='address3'readonly>   
         </p>
-        <p><input type="submit" value="가입완료"> <input type="reset" value="다시작성"></p>
+        <p><label>
+                <p><input type="submit" value="가입완료"> <input type="reset" value="다시작성"></p>
     </form>
 </body>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

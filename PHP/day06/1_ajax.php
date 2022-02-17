@@ -12,8 +12,8 @@
     <p><input type="text" id="userid"></p>
     <p><input type="password" id="userpw"></p>
     <p>
-        <input type="button" value="요청보내기(GET)" onclick="sendit_get()">
-        <input type="button" value="요청보내기(POST" onclick="sendit_post()">
+        <input type="button" value="요청 보내기(GET)" onclick="sendit_get()">
+        <input type="button" value="요청 보내기(POST)" onclick="sendit_post()">
     </p>
 </body>
 <script>
@@ -22,13 +22,14 @@
         xhr.onreadystatechange = function(){
             if(xhr.readyState == XMLHttpRequest.DONE){
                 if(xhr.status == 200){
+                                                                //apple<br>1111<br>
                     document.getElementById("text").innerHTML = xhr.responseText;
                 }
             }
         }
         let userid = document.getElementById("userid").value;
         let userpw = document.getElementById("userpw").value;
-        xhr.open("GET", `1_ajax_ok.php?userid=${userid}&userpw=${userpw}`,true);
+        xhr.open("GET",`1_ajax_ok.php?userid=${userid}&userpw=${userpw}`,true);
         xhr.send();
     }
     function sendit_post(){
@@ -41,11 +42,10 @@
             }
         }
         xhr.open("POST","1_ajax_ok.php",true);
-        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
         let userid = document.getElementById("userid").value;
         let userpw = document.getElementById("userpw").value;
         xhr.send(`userid=${userid}&userpw=${userpw}`);
     }
-
 </script>
 </html>

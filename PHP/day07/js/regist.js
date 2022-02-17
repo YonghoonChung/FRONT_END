@@ -13,7 +13,7 @@ const sendit = function(){
         userid.focus();
         return false;
     }
-    if(result.innerHTML == "&nbsp;"){
+    if(result.innerHTML == "&nsbp;"){
         alert("아이디 중복체크를 진행해주세요!");
         return false;
     }
@@ -110,7 +110,7 @@ function checkId(){
     xhr.onreadystatechange = function(){
         if(xhr.readyState == XMLHttpRequest.DONE){
             if(xhr.status == 200){
-                let txt = xhr.responseText;
+                let txt = xhr.responseText.trim();
                 if(txt == "O"){
                     result.innerHTML = "사용할 수 있는 아이디입니다.";
                 }
