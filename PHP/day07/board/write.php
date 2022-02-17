@@ -1,3 +1,7 @@
+<?php
+    include "../include/logincheck.php";
+    $userid = $_SESSION['userid'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,18 @@
     <title>글쓰기</title>
 </head>
 <body>
+    <a href='../logout.php'>로그아웃</a>
     <h2>글쓰기</h2>
+    <form action="write_ok.php" method="post">
+        <p>아이디 : <?=$userid?></p>
+        <p>제목 : <input type="text" name="boardtitle"></p>
+        <p>내용</p>
+        <p><textarea name="boardcontent" cols="40" rows="10"></textarea></p>
+        <p>
+            <input type="submit" value="확인">
+            <input type="reset" value="다시작성">
+            <input type="button" value="리스트" onclick="location.href='list.php'">
+        </p>
+    </form>
 </body>
 </html>

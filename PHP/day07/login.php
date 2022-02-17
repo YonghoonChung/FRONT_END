@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +8,31 @@
     <title>로그인</title>
 </head>
 <body>
-    <?php
-        $joinid = "";
-        if(isset($_COOKIE['joinid'])){
-            $joinid = $_COOKIE['joinid'];
-        }
-    ?>
+<?php
+    $joinid = "";
+    if(isset($_COOKIE['joinid'])){
+        $joinid = $_COOKIE['joinid'];
+    }
+?>
+
+<?php
+    if(!isset($_SESSION['userid'])){
+?>
     <h2>로그인</h2>
     <form action="login_ok.php" method="post">
-        <p> 아이디 : <input type="text" name="userid" value="<?=$joinid?>"></p>
-        <p> 비밀번호 : <input type="password" name="userpw"></p>
+        <p>아이디 : <input type="text" name="userid" value="<?=$joinid?>"></p>
+        <p>비밀번호 : <input type="password" name="userpw"></p>
         <p><input type="submit" value="로그인"></p>
     </form>
     <a href="./regist.php">회원가입</a>
+<?php
+    }
+    else{
+?>
+    <p><?=$_SESSION['userid']?>님 환영합니다~</p>
+    <p><a href="./logout.php">로그아웃</a> | <a href="./board/list.php">회원게시판</a></p>
+<?php
+    }
+?>
 </body>
 </html>
