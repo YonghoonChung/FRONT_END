@@ -11,3 +11,5 @@ create table tb_board(
     references tb_user(userid)
 );
 select * from tb_board;
+
+drop table tb_board;
