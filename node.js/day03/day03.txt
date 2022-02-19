@@ -5,3 +5,22 @@ nodemon
 PUG(Jade)
     http://jade-lang.com/
     npm install jage
+
+node.js를 통해 메일 보내기
+    nodemailer 모듈
+        gmail(naver) 서버를 이용해서 메일을 보냄
+        npm i nodemailer
+
+nodemailer 설정
+
+메일을 보내줄 객체 생성
+    nodemailer.createTransport({
+        service:'서비스명(gmail,naver,...)',
+        auth:{
+            user:'계정',
+            pass:'비밀번호'
+        },
+        host:'smtp.mail.com',
+        port:'465'
+    })
+
