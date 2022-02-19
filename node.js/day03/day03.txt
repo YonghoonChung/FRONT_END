@@ -1,0 +1,7 @@
+nodemon
+    서버 코드를 변경할 때마다 서버를 재시작하도록 해주는 모듈
+    npm install -g nodemon
+
+PUG(Jade)
+    http://jade-lang.com/
+    npm install jage
