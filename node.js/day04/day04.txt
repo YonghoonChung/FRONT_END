@@ -1,2 +1,37 @@
 사용자 정의 모듈
     사용자가 직접 만들어 코드를 관리할 수 있도록 작석한 모듈
+
+1.
+    module.exports = ()=>{
+        모듈 코드 선언 
+        ...
+    }
+
+    const 객체명 = require('파일명')();
+
+2. 
+    모듈 코드
+    ...
+    module.export = 변수;
+
+    const 객체명 = require('변수명');
+
+JSON(Javascript Object Notation)
+    언어가 다른 곳에서 데이터를 교환하고 저장하기 위한 곳
+    데이터를 교환하고 저장하기 위해 만들어진 텍스트 기반의 데이터 교환 표준언어
+    { Key:Value }
+    { 배열명:[값1, 값2, ...]}
+
+JSON 문법 검증
+    https://jsonlint.com/
+
+JSON.parse("문자열")
+    JSON 포맷으로 되어있는 문자열을 JSON 객체로 변환
+    문자열 -> ㄱ
+
+JSON.stringify
+
+cookie-parser 모듈
+    쿠키를 쉽게 설정하고 사용할 수 있게 도와주는 모듈
+    익스프레스 객체에 미들웨어로 등록
+    npm i cookie-parser
