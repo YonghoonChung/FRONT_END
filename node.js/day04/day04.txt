@@ -35,3 +35,25 @@ cookie-parser 모듈
     쿠키를 쉽게 설정하고 사용할 수 있게 도와주는 모듈
     익스프레스 객체에 미들웨어로 등록
     npm i cookie-parser
+
+    cp()                            : 일반 쿠키를 사용
+    cp('암호화하기 위한 문자열')    : 암호화된 쿠기 사용 
+쿠키 생성
+    resp.cookie('키', '값', {쿠키 생성 옵션})
+
+쿠키 생성 옵션
+    maxAge      : 쿠키 유효기간을 밀리초 단위로 설정
+    expires     : 쿠기의 만료시간을 GMT시간으로 설정
+    path        : cookie의 경로를 설정, 기본설정은 "/"
+    signed      : 암호화시 사용
+
+쿠키 조회
+    req.cookies.키값            : 일반 쿠키 사용
+    req.signedCookies.키값      : 암호화된 쿠키 사용
+
+쿠키 삭제
+    resp.clearCookie('키값',{path:'경로'});
+
+express-session 모듈
+
+    npm i express-session
