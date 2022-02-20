@@ -27,9 +27,11 @@ JSON 문법 검증
 
 JSON.parse("문자열")
     JSON 포맷으로 되어있는 문자열을 JSON 객체로 변환
-    문자열 -> ㄱ
+    문자열 -> JSON 객체
 
-JSON.stringify
+JSON.stringify(JSON객체)
+    JSON 객체를 JSON 포맷의 문자열로 변환
+    JSON 객체 -> 문자열
 
 cookie-parser 모듈
     쿠키를 쉽게 설정하고 사용할 수 있게 도와주는 모듈
@@ -38,6 +40,8 @@ cookie-parser 모듈
 
     cp()                            : 일반 쿠키를 사용
     cp('암호화하기 위한 문자열')    : 암호화된 쿠기 사용 
+    cp('!@%@#%@%@!%!!')
+
 쿠키 생성
     resp.cookie('키', '값', {쿠키 생성 옵션})
 
@@ -55,5 +59,25 @@ cookie-parser 모듈
     resp.clearCookie('키값',{path:'경로'});
 
 express-session 모듈
-
+    세션을 관리하기 위한 익스프레스 미들웨어 모듈
     npm i express-session
+
+세션 모듈의 옵션
+    secret
+        쿠키를 임의로 변조하는 것을 방지하기 위한 값
+        이 값을 통해서 세션을 암호화해서 저장
+    resave
+        세션을 언제나 저장할지 지정하는 값.
+        이 값은 false로 하는것을 권장
+    saveUninitialized
+        세션이 저장되기 전에 saveUninitialized 상태로 미리 만들어져서 저장
+
+세션 초기 설정
+    const 객체명 = req.session;
+    객체명.키 = 값;
+
+세션 사용
+    객체명.키 --> 저장된 값을 사용 가능
+
+세션 삭제
+    req.session.destory(세션 삭제시 호출할 함수)
