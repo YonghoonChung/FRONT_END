@@ -1,0 +1,77 @@
+MongoDB
+
+MongoDB의 특징
+	NoSQL이기 때문에 관계형 데이터베이스의 테이블 개념이 없음
+	데이터가 모인 하나의 단위를 컬렉션이라고 부름
+	데이터를 정해 놓은 컬럼의 형태로 컬렉션에 넣어야 한다는 제약이 없음
+	MongoDB의 데이터베이스는 컬렉션들의 집합
+	컬렉션은 여러개의 문서 객체를 가질 수 있음
+
+	예)
+		{"id":1, "userid":"apple", "userpw":"1111"}
+		{"id":2, "name":"반하나"}
+
+	Database > Collection > Document
+
+document
+	RDBMS의 record와 비슷한 개념
+	데이터 구조가 한개 이상의 key-value-pair로 이루어져 있음
+	동적인 스키마를 가지고 있음
+	같은 collection 안에 있는 document끼리 다른 스키마를 가지고 있을 수 있음
+
+collection
+	document들의 그룹
+	collection 내부에 document들이 위치
+	table과 비슷한 개념이지만 RDBMS와 달리 스키마를 따로 가지지 않음
+
+MongoDB 다운로드
+	https://www.mongodb.com/try/download/community
+
+MongoDB 환경설정
+	윈도우 검색창에 환경 검색 > "시스템 환경 변수 편집" 클릭 > 환경 변수 버튼 클릭
+	> 아래쪽에서 Path 변수 찾기 > Path 더블클릭 > 새로 만들기 버튼 클릭
+	> C:\Program Files\MongoDB\Server\5.0\bin 작성 > 확인으로 전부 닫기
+	> cmd 다시 켜서 "mongo" 명령어 수행 > ~~~ 메세지 나오면 성공
+
+MongoDB의 문법
+	데이터베이스 확인
+		show dbs;
+
+	데이터베이스 생성
+		use 데이터베이스명;
+		use frontend;
+		데이터베이스가 없으면 생성 후 선택, 있으면 선택
+		데이터베이스에 자료가 없을 경우 show dbs에 나타나지 않음
+
+컬렉션 생성
+	db.createCollection('컬렉션명');
+
+컬렉션 확인
+	show collections;
+
+컬렉션 삭제
+	db.컬렉션명.drop();
+
+document 추가
+	db.컬렉션명.insert({키1:값1,키2:값2,...})
+
+document 확인
+	검색
+		db.컬렉션명.find();
+
+	구조적으로 정리해서 검색
+		db.컬렉션명.find().pretty();
+	
+	조건으로 검색
+		db.컬렉션명.find(객체).pretty();
+
+	_id는 각 document의 유일한 키로 쓰이는 고유한 값
+
+
+
+
+
+
+
+
+
