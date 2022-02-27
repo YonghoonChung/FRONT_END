@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="이 세상에서 없애기" name="userid" id="userid">
+    <input type="button" value="탈퇴하기" onclick="leaveId()">
+    <p id="result"></p>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function leaveId(){
+        const result = document.getElementById("result");
+        //apple
+        const userid = document.getElementById("userid").value;
+        //{userid:"apple"}
+        let obj = {userid:userid};
+        //{userid:"apple"} <= 이렇게 생긴 JSON
+        let data = JSON.stringify(obj);
+        console.log(data);
+        $.ajax({
+            url:"/member/deleteJSON",
+            type:"DELETE",
+            contentType:"application/json",
+            data:data,
+            success:function(data){
+                if(data == 'O'){
+                    result.innerHTML = "탈퇴 성공!";
+                }
+                else{
+                    result.innerHTML = '탈퇴 실패!';
+                }
+
+            }
+        })
+    }
+
+</script>
+</html>
