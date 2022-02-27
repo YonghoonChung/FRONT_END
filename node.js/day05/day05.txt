@@ -193,28 +193,37 @@ document의 삭제
 	이름 : 줄리아
 	성별 : 여자
 
+	db.member.insert({"userid":"julia", "userpw":"9999", :"name":"줄리아", "gender":"여자"})
+
 	db.member.insert({"userid":"julia","userpw":"9999",
 	"name":"줄리아","gender":"여자"})
 
 2. 2000 포인트 추가
+	db.member.update({"userid":"julia"}, {$set:{"point":200}})
+
 	db.member.update(
 		{"userid":"julia"},
 		{$set:{"point":2000}}
 	);
 
 3. 비밀번호 변경(0000)
+	db.member.update({"userid":"julia"}, {$set:{"userpw":"0000"}})
+
 	db.member.update(
 		{"userid":"julia"},
 		{$set:{"userpw":"0000"}}
 	)
 
 4. 성별 필드 제거
+	db.member.update({"userid":"julia"},{$unset:{"gender":1}})
+	
 	db.member.update(
 		{"userid":"julia"},
 		{$unset:{"gender":1}}
 	);
 
 5. 줄리아 회원 탈퇴
+	db.member.remove({"userid":"julia"})
 	db.member.remove({"userid":"julia"})
 
 
